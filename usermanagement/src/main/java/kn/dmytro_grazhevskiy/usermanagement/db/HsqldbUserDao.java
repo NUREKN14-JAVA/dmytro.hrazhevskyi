@@ -38,7 +38,11 @@ public HsqldbUserDao(ConnectionFactory connectionFactory) {
 			if(keys.next()){
 				user.setId(new Long(keys.getLong(1)));
 			}
-			return null;
+			keys.close();
+			callableStatement.close();
+			statement.close();
+			connection.close();
+			return user;
 		} catch(DatabaseException e){
 			throw e;
 		}catch (SQLException e) {
