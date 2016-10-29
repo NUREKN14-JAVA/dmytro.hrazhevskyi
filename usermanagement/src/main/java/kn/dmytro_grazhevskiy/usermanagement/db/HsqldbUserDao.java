@@ -19,8 +19,22 @@ private static final String INSERT_QUERY = "INSERT INTO users(firstname, lastnam
 private ConnectionFactory connectionFactory;
 
 
+public HsqldbUserDao() {
+	//super();
+}
+
 public HsqldbUserDao(ConnectionFactory connectionFactory) {
 	//super();
+	this.connectionFactory = connectionFactory;
+}
+
+
+	public ConnectionFactory getConnectionFactory() {
+	return connectionFactory;
+}
+
+
+public void setConnectionFactory(ConnectionFactory connectionFactory) {
 	this.connectionFactory = connectionFactory;
 }
 
