@@ -12,11 +12,14 @@ import kn.dmytro_grazhevskiy.usermanagement.User;
 
 public class HsqldbUserDaoTest extends TestCase {
 
-	 HsqldbUserDao dao;
+	 private HsqldbUserDao dao;
+	 private ConnectionFactory connectionFactory;
+	 
 		@Before
 		protected void setUp() throws Exception {
 			super.setUp();
-			dao = new HsqldbUserDao();
+			connectionFactory=new ConnectionFactoryImpl();
+			dao = new HsqldbUserDao(connectionFactory);
 			
 		}
 
