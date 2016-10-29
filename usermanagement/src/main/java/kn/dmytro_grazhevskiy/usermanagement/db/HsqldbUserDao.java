@@ -1,7 +1,9 @@
 package kn.dmytro_grazhevskiy.usermanagement.db;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collection;
 import java.sql.Date;
@@ -30,6 +32,11 @@ public HsqldbUserDao(ConnectionFactory connectionFactory) {
 			if(n!=1){
 				throw new DatabaseException("Number of the inserted rows: "+ n);
 				
+			}
+			CallableStatement callableStatement = connection.prepareCall("call IDENTITY()");
+			ResultSet keys = callableStatement.executeQuery();
+			if(keys.next()){
+				user.setId(new Long(keys.getLong(1)));
 			}
 			return null;
 		} catch(DatabaseException e){
