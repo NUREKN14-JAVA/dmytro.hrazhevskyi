@@ -35,8 +35,8 @@ public class DaoFactory {
 		UserDao result = null;
 		try {
 			Class clazz = Class.forName(properties.getProperty(USER_DAO));
-			UserDao userDao = (UserDao) clazz.newInstance();
-			userDao.setConnectionFactory(getConnectionFactory());
+			result = (UserDao) clazz.newInstance();
+			result.setConnectionFactory(getConnectionFactory());
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
