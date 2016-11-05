@@ -54,6 +54,7 @@ public class BrowsePanel extends JPanel implements ActionListener {
 			deleteButton = new JButton();
 			 deleteButton.setText("Delete");
 			 deleteButton.setName("deleteButton");
+			 deleteButton.setActionCommand("delete");
 			 deleteButton.addActionListener(this);
 		}
 		return deleteButton;
@@ -64,6 +65,7 @@ public class BrowsePanel extends JPanel implements ActionListener {
 			detailsButton = new JButton();
 				 detailsButton.setText("Details");
 			 detailsButton.setName("detailButton");
+			 detailsButton.setActionCommand("details");
 			 detailsButton.addActionListener(this);
 		}
 		return detailsButton;
@@ -74,6 +76,7 @@ public class BrowsePanel extends JPanel implements ActionListener {
 			editButton = new JButton();
 				 editButton.setText("Edit");
 			 editButton.setName("editButton");
+			 editButton.setActionCommand("edit");
 			 editButton.addActionListener(this);
 		}
 		return editButton;
@@ -84,6 +87,7 @@ public class BrowsePanel extends JPanel implements ActionListener {
 		addButton = new JButton();
 		 addButton.setText("New");
 		 addButton.setName("addButton");
+		  addButton.setActionCommand("add");
 		 addButton.addActionListener(this);
 	}
 		return addButton;
@@ -104,11 +108,15 @@ public class BrowsePanel extends JPanel implements ActionListener {
 		}
 		return userTable;
 	}
+	
 
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
-		
+	public void actionPerformed(ActionEvent e) {
+		String actionCommand = e.getActionCommand();
+		if("add".equalsIgnoreCase(actionCommand)){
+		this.setVisible(false);
+		parent.showAddPanel();
+		}
 	}
 
 }
