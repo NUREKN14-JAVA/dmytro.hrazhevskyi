@@ -5,6 +5,8 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import kn.dmytro_grazhevskiy.usermanagement.util.Messages;
+
 public class MainFrame extends JFrame {
 
 	
@@ -21,7 +23,7 @@ public class MainFrame extends JFrame {
 	private void initialize(){
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
-		this.setTitle("”правление пользовател€ми");
+		this.setTitle(Messages.getString("MainFrame.user_management")); //$NON-NLS-1$
 		this.setContentPane(getContentPanel());
 	}
 	
