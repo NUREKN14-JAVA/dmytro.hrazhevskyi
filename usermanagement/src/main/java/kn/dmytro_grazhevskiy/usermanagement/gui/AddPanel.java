@@ -1,16 +1,23 @@
 package kn.dmytro_grazhevskiy.usermanagement.gui;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import kn.dmytro_grazhevskiy.usermanagement.User;
+import kn.dmytro_grazhevskiy.usermanagement.db.DatabaseException;
 import kn.dmytro_grazhevskiy.usermanagement.util.Messages;
 
 public class AddPanel extends JPanel implements ActionListener {
@@ -22,6 +29,7 @@ public class AddPanel extends JPanel implements ActionListener {
 	private JTextField firstNameField;
     private JTextField dateOfBirthField;
     private JTextField lastNameField;
+	private Color bgColor;
 
 	public AddPanel(MainFrame parent) {
 	        this.parent = parent;
@@ -112,10 +120,45 @@ public class AddPanel extends JPanel implements ActionListener {
 	    
 	    
 
-		@Override
-		public void actionPerformed(ActionEvent arg0) {
-			// TODO Auto-generated method stub
+	
+		public void actionPerformed(ActionEvent e){
+			if ("ok".equalsIgnoreCase(e.getActionCommand())) {
+	            User user = new User();
+	            user.setFirstName(getFirstNameField().getText());
+	            user.setLastName(getLastNameField().getText());
+	            DateFormat format = DateFormat.getDateInstance();
+	            try {
+	                Date date = format.parse(getDateOfBirthField().getText());
+	                user.setDateOfBirth(date);
+	            } catch (ParseException e1) {
+	                getDateOfBirthField().setBackground(Color.RED);
+	                return;
+	            }
+	            try {
+	                parent.getDao().create(user );
+	            } catch (DatabaseException e1) {
+	                JOptionPane.showMessageDialog(this, e1.getMessage(), "Error",
+	                        JOptionPane.ERROR_MESSAGE);
+	            }
+	        }
+			clearFields();
+		        this.setVisible(false);
+		        ((MainFrame) parent).showBrowsePanel();
+		        
 			
 		}
 
-}
+		private void clearFields() {
+			 getFirstNameField().setText("");
+		        getFirstNameField().setBackground(bgColor);
+		        
+		        getLastNameField().setText("");
+		        getLastNameField().setBackground(bgColor);
+
+		        getDateOfBirthField().setText("");
+		        getDateOfBirthField().setBackground(bgColor);
+		}
+			
+		}
+
+
