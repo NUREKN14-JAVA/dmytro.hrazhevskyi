@@ -25,8 +25,14 @@
 			<classpath>
 				<pathelement location="${build-dir}"/>
 			</classpath>
+			<classpath>
+						<pathelement location="${build-dir}"/>
+					</classpath>
 			<formatter type="plain"/>
 			<test name="kn.dmytro_grazhevskiy.usermanagement.UserTest"></test>
+			<test name="kn.dmytro_grazhevskiy.usermanagement.db.DaoFactoryTest"></test>
+			<test name="kn.dmytro_grazhevskiy.usermanagement.db.HsqldbTest"></test>
+			<test name="kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest"></test>
 		</junit>
 	</target>
 </project>

@@ -12,7 +12,7 @@ import java.sql.Date;
 
 import kn.dmytro_grazhevskiy.usermanagement.User;
 
- class HsqldbUserDao implements UserDao {
+ public class HsqldbUserDao implements UserDao {
 
 private static final String SELECT_ALL_QUERY = "SELECT id, firstname, lastname, dateofbirth FROM users";
 private static final String INSERT_QUERY = "INSERT INTO users(firstname, lastname, dateofbirth) VALUES (?, ?, ?)";

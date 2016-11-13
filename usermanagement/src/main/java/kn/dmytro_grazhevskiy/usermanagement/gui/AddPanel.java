@@ -25,7 +25,7 @@ public class AddPanel extends JPanel implements ActionListener {
 	private JButton cancelButton;
 	private JButton okButton;
 	private JPanel fieldPanel;
-	private MainFrame parent;
+	protected MainFrame parent;
 	private JTextField firstNameField;
     private JTextField dateOfBirthField;
     private JTextField lastNameField;
@@ -55,7 +55,7 @@ public class AddPanel extends JPanel implements ActionListener {
 	         return fieldPanel;
 		}
 
-		private JTextField getDateOfBirthField() {
+		protected JTextField getDateOfBirthField() {
 			  if (dateOfBirthField == null) {
 		            dateOfBirthField = new JTextField();
 		            dateOfBirthField.setName("dateOfBirthField");  //$NON-NLS-1$
@@ -63,7 +63,7 @@ public class AddPanel extends JPanel implements ActionListener {
 		        return dateOfBirthField;
 		}
 
-		private JTextField getLastNameField() {
+		protected JTextField getLastNameField() {
 			if (lastNameField == null) {
 	            lastNameField = new JTextField();
 	            lastNameField.setName("lastNameField"); //$NON-NLS-1$
@@ -79,7 +79,7 @@ public class AddPanel extends JPanel implements ActionListener {
 			
 		}
 
-		private JTextField getFirstNameField() {
+		protected JTextField getFirstNameField() {
 			if (firstNameField == null) {
 	            firstNameField = new JTextField();
 	            firstNameField.setName("firstNameField");  //$NON-NLS-1$
@@ -148,7 +148,7 @@ public class AddPanel extends JPanel implements ActionListener {
 			
 		}
 
-		private void clearFields() {
+		protected void clearFields() {
 			 getFirstNameField().setText("");
 		        getFirstNameField().setBackground(bgColor);
 		        

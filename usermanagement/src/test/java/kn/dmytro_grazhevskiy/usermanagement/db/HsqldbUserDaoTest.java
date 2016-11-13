@@ -84,20 +84,23 @@ public class HsqldbUserDaoTest extends DatabaseTestCase {
 	           // cal.add(1972,Calendar.NOVEMBER,17);
 	           // SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
 	           // String formatted = format1.format(cal.getTime());
-	            DateFormat format = DateFormat.getInstance();
-	        	Date date = format.parse("1972-11-17");
+	            Calendar calendar = Calendar.getInstance();
+	            calendar.set(1972, Calendar.NOVEMBER, 17);
+	            //DateFormat format = DateFormat.getInstance();
+	        	//Date date = format.parse("1972-11-17");
 	            User user = dao.find(id);
 	            //String formatted = format1.format(cal.getTime());
 	            assertEquals("Firstname fail", newFirstName, user.getFirstName());
 	            assertEquals("Lastname fail", newLastName, user.getLastName());
-	            assertEquals("Date fail", date, user.getDateOfBirth().toString());
+	            Calendar calendarFind = Calendar.getInstance();
+	            calendarFind.setTime(user.getDateOfBirth());
+	            assertEquals("Year fail", calendar.get(Calendar.YEAR), calendarFind.get(Calendar.YEAR));
+	            assertEquals("Month fail", calendar.get(Calendar.MONTH), calendarFind.get(Calendar.MONTH));
+	            assertEquals("Day fail", calendar.get(Calendar.DAY_OF_MONTH), calendarFind.get(Calendar.DAY_OF_MONTH));
 	        } catch (DatabaseException e) {
 	            e.printStackTrace();
 	            fail(e.toString());
-	        } catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+	        } 
 	        long id = 3L;
 	        try {
 	            dao.find(id);   
