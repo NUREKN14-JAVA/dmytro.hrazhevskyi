@@ -23,7 +23,6 @@ public class EditPanel extends AddPanel {
         setName("editPanel");
     }
     protected void doAction(ActionEvent e) throws ParseException {
-        System.out.println(user);
         if ("ok".equalsIgnoreCase(e.getActionCommand())) {
             user.setFirstName(getFirstNameField().getText());
             user.setLastName(getLastNameField().getText());
