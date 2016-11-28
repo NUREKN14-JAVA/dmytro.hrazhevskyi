@@ -204,7 +204,7 @@ assertEquals(0,table.getRowCount());
             getHelper().enterClickAndLeave(new MouseEventData(this, cancelButton));
             find(JPanel.class, "browsePanel");
             table = (JTable) find(JTable.class, "userTable");
-            assertEquals(2, table.getRowCount());
+            assertEquals(1, table.getRowCount());
             mockUserDao.verify();      
         } catch (Exception e) {
             fail(e.toString());
@@ -213,7 +213,7 @@ assertEquals(0,table.getRowCount());
 
     public void testEditUser() {
         try {           
-            User expectedUser = new User(new Long(1000), "George", "Bush", new Date());
+            User expectedUser = new User(new Long(1), "Patrick", "Rotfuss", new Date());
             System.out.println(expectedUser);
             mockUserDao.expect("update", expectedUser);
             List users = new ArrayList(this.users);
@@ -221,7 +221,6 @@ assertEquals(0,table.getRowCount());
             JTable table = (JTable) find(JTable.class, "userTable");
             assertEquals(1, table.getRowCount());
             JButton editButton = (JButton) find(JButton.class, "editButton");
-            getHelper().enterClickAndLeave(new JTableMouseEventData(this, table, 0, 0, 1));
             getHelper().enterClickAndLeave(new MouseEventData(this, editButton));         
             find(JPanel.class, "editPanel");
             JTextField firstNameField = (JTextField) find(JTextField.class,
@@ -267,7 +266,7 @@ assertEquals(0,table.getRowCount());
 
     public void testDeleteUser() {
         try {
-            User expectedUser = new User(new Long(1000), "George", "Bush", new Date());
+            User expectedUser = new User(new Long(1), "Patrick", "Rotfuss", new Date());
             mockUserDao.expect("delete", expectedUser);
             List users = new ArrayList();
             mockUserDao.expectAndReturn("findAll", users);      

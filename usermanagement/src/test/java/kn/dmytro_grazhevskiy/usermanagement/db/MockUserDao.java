@@ -12,7 +12,7 @@ public class MockUserDao implements UserDao {
     private Map<Long, User> users = new HashMap<Long, User>();
     
     public MockUserDao(){
-    	User user = new User();
+ 	User user = new User();
     	user.setId(id);
     	user.setFirstName("Patrick");
     	user.setLastName("Rotfuss");
