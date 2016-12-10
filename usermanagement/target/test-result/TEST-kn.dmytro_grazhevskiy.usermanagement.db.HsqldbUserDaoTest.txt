@@ -1,0 +1,8 @@
+Testsuite: kn.dmytro_grazhevskiy.usermanagement.db.HsqldbUserDaoTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,181 sec
+
+Testcase: testFindAll took 1,052 sec
+Testcase: testFind took 0,016 sec
+Testcase: testCreate took 0,049 sec
+Testcase: testDelete took 0,017 sec
+Testcase: testUpdate took 0,01 sec

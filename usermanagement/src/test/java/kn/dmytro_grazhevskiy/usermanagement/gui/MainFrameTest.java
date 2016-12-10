@@ -54,9 +54,9 @@ public class MainFrameTest extends JFCTestCase {
 			DaoFactory.init(properties);
 			mockUserDao = ((MockDaoFactory) DaoFactory.getInstance()).getMockUserDao();
 			setHelper(new JFCTestHelper());
-			String firstName = "Arsenii20";
-			String lastName = "Holdibin20";
-			Date now = new Date( new Timestamp(2016, 11, 11, 0, 0, 0, 0).getTime());
+			String firstName = "Patrick";
+			String lastName = "Rotfuss";
+			Date now = new Date( new Timestamp(2016, 12, 03, 0, 0, 0, 0).getTime());
 			expectedUser = new User(20L, firstName, lastName, now);
 			user = new User(20L, firstName, lastName, now);
 			users = new ArrayList();
@@ -111,8 +111,8 @@ public class MainFrameTest extends JFCTestCase {
 	@Test
 	public void testAddUser() {
 		try {
-			String firstName = "Arsenii";
-			String lastName = "Holdibin";
+			String firstName = "Max";
+			String lastName = "Brooks";
 			Date now = new Date();
 
 			User user = new User(firstName, lastName, now);
@@ -217,9 +217,9 @@ public class MainFrameTest extends JFCTestCase {
 	@Test
 	public void testEditUser() {
 		try {
-			String firstName = "Arsenii";
-			String lastName = "Holdibin";
-			Date dateOfBirth = new Date(1222,3,3);
+			String firstName = "Stephen";
+			String lastName = "King";
+			Date dateOfBirth = new Date(1963,11,23);
 			User expectedUser = new User(20L, firstName, lastName, dateOfBirth);
 			mockUserDao.expectAndReturn("update", user, expectedUser);
 			users.remove(user);
