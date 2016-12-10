@@ -21,7 +21,7 @@ public class BrowseServletTest extends MockServletTestCase {
         super.setUp();
         createServlet(BrowseServlet.class);
     }
-    
+    @Test
     public void testBrowse() {
         User user = new User(new Long(1000), "John", "Doe", new Date());
         List list = Collections.singletonList(user);
@@ -31,8 +31,8 @@ public class BrowseServletTest extends MockServletTestCase {
         assertNotNull("Could not find list of users in session", collection);
         assertSame(list, collection);
     }
-
-   /* public void testEdit() {
+@Test
+    public void testEdit() {
         User user = new User(new Long(1000), "John", "Doe", new Date());
         getMockUserDao().expectAndReturn("find", new Long(1000), user);
         addRequestParameter("editButton", "Edit");
@@ -42,11 +42,11 @@ public class BrowseServletTest extends MockServletTestCase {
         assertNotNull("Could not find user in session", user);
         assertSame(user, userInSession);
     }
-
+@Test
     public void testEditWithoutId() {
         User user = new User(new Long(1000), "John", "Doe", new Date());
         addRequestParameter("editButton", "Edit");
         doPost();
         assertNotNull("Could not find error message", getWebMockObjectFactory().getMockRequest().getAttribute("error"));
-    }*/
+    }
 }
