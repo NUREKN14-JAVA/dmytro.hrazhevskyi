@@ -1,0 +1,195 @@
+Testsuite: kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 1,092 sec
+------------- Standard Error -----------------
+java.lang.RuntimeException: java.lang.IllegalArgumentException: interface kn.dmytro_grazhevskiy.usermanagement.db.UserDao is not visible from class loader
+	at kn.dmytro_grazhevskiy.usermanagement.db.DaoFactory.getInstance(DaoFactory.java:31)
+	at kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest.setUp(MainFrameTest.java:51)
+	at junit.extensions.jfcunit.JFCTestCase$1.run(JFCTestCase.java:314)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: interface kn.dmytro_grazhevskiy.usermanagement.db.UserDao is not visible from class loader
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.WeakCache$Factory.get(Unknown Source)
+	at java.lang.reflect.WeakCache.get(Unknown Source)
+	at java.lang.reflect.Proxy.getProxyClass0(Unknown Source)
+	at java.lang.reflect.Proxy.newProxyInstance(Unknown Source)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:22)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:26)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:30)
+	at kn.dmytro_grazhevskiy.usermanagement.db.MockDaoFactory.<init>(MockDaoFactory.java:11)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at kn.dmytro_grazhevskiy.usermanagement.db.DaoFactory.getInstance(DaoFactory.java:29)
+	... 4 more
+java.lang.NullPointerException
+	at kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest.tearDown(MainFrameTest.java:66)
+	at junit.extensions.jfcunit.JFCTestCase$2.run(JFCTestCase.java:334)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.RuntimeException: java.lang.IllegalArgumentException: interface kn.dmytro_grazhevskiy.usermanagement.db.UserDao is not visible from class loader
+	at kn.dmytro_grazhevskiy.usermanagement.db.DaoFactory.getInstance(DaoFactory.java:31)
+	at kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest.setUp(MainFrameTest.java:51)
+	at junit.extensions.jfcunit.JFCTestCase$1.run(JFCTestCase.java:314)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: interface kn.dmytro_grazhevskiy.usermanagement.db.UserDao is not visible from class loader
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.WeakCache$Factory.get(Unknown Source)
+	at java.lang.reflect.WeakCache.get(Unknown Source)
+	at java.lang.reflect.Proxy.getProxyClass0(Unknown Source)
+	at java.lang.reflect.Proxy.newProxyInstance(Unknown Source)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:22)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:26)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:30)
+	at kn.dmytro_grazhevskiy.usermanagement.db.MockDaoFactory.<init>(MockDaoFactory.java:11)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at kn.dmytro_grazhevskiy.usermanagement.db.DaoFactory.getInstance(DaoFactory.java:29)
+	... 4 more
+java.lang.NullPointerException
+	at kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest.tearDown(MainFrameTest.java:66)
+	at junit.extensions.jfcunit.JFCTestCase$2.run(JFCTestCase.java:334)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.RuntimeException: java.lang.IllegalArgumentException: interface kn.dmytro_grazhevskiy.usermanagement.db.UserDao is not visible from class loader
+	at kn.dmytro_grazhevskiy.usermanagement.db.DaoFactory.getInstance(DaoFactory.java:31)
+	at kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest.setUp(MainFrameTest.java:51)
+	at junit.extensions.jfcunit.JFCTestCase$1.run(JFCTestCase.java:314)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: interface kn.dmytro_grazhevskiy.usermanagement.db.UserDao is not visible from class loader
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.WeakCache$Factory.get(Unknown Source)
+	at java.lang.reflect.WeakCache.get(Unknown Source)
+	at java.lang.reflect.Proxy.getProxyClass0(Unknown Source)
+	at java.lang.reflect.Proxy.newProxyInstance(Unknown Source)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:22)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:26)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:30)
+	at kn.dmytro_grazhevskiy.usermanagement.db.MockDaoFactory.<init>(MockDaoFactory.java:11)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at kn.dmytro_grazhevskiy.usermanagement.db.DaoFactory.getInstance(DaoFactory.java:29)
+	... 4 more
+java.lang.NullPointerException
+	at kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest.tearDown(MainFrameTest.java:66)
+	at junit.extensions.jfcunit.JFCTestCase$2.run(JFCTestCase.java:334)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.RuntimeException: java.lang.IllegalArgumentException: interface kn.dmytro_grazhevskiy.usermanagement.db.UserDao is not visible from class loader
+	at kn.dmytro_grazhevskiy.usermanagement.db.DaoFactory.getInstance(DaoFactory.java:31)
+	at kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest.setUp(MainFrameTest.java:51)
+	at junit.extensions.jfcunit.JFCTestCase$1.run(JFCTestCase.java:314)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: interface kn.dmytro_grazhevskiy.usermanagement.db.UserDao is not visible from class loader
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.WeakCache$Factory.get(Unknown Source)
+	at java.lang.reflect.WeakCache.get(Unknown Source)
+	at java.lang.reflect.Proxy.getProxyClass0(Unknown Source)
+	at java.lang.reflect.Proxy.newProxyInstance(Unknown Source)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:22)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:26)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:30)
+	at kn.dmytro_grazhevskiy.usermanagement.db.MockDaoFactory.<init>(MockDaoFactory.java:11)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at kn.dmytro_grazhevskiy.usermanagement.db.DaoFactory.getInstance(DaoFactory.java:29)
+	... 4 more
+java.lang.NullPointerException
+	at kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest.tearDown(MainFrameTest.java:66)
+	at junit.extensions.jfcunit.JFCTestCase$2.run(JFCTestCase.java:334)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.RuntimeException: java.lang.IllegalArgumentException: interface kn.dmytro_grazhevskiy.usermanagement.db.UserDao is not visible from class loader
+	at kn.dmytro_grazhevskiy.usermanagement.db.DaoFactory.getInstance(DaoFactory.java:31)
+	at kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest.setUp(MainFrameTest.java:51)
+	at junit.extensions.jfcunit.JFCTestCase$1.run(JFCTestCase.java:314)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: interface kn.dmytro_grazhevskiy.usermanagement.db.UserDao is not visible from class loader
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.Proxy$ProxyClassFactory.apply(Unknown Source)
+	at java.lang.reflect.WeakCache$Factory.get(Unknown Source)
+	at java.lang.reflect.WeakCache.get(Unknown Source)
+	at java.lang.reflect.Proxy.getProxyClass0(Unknown Source)
+	at java.lang.reflect.Proxy.newProxyInstance(Unknown Source)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:22)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:26)
+	at com.mockobjects.dynamic.Mock.<init>(Mock.java:30)
+	at kn.dmytro_grazhevskiy.usermanagement.db.MockDaoFactory.<init>(MockDaoFactory.java:11)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at kn.dmytro_grazhevskiy.usermanagement.db.DaoFactory.getInstance(DaoFactory.java:29)
+	... 4 more
+java.lang.NullPointerException
+	at kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest.tearDown(MainFrameTest.java:66)
+	at junit.extensions.jfcunit.JFCTestCase$2.run(JFCTestCase.java:334)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+------------- ---------------- ---------------
+
+Testcase: testEditUser took 0,191 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest.setUp(MainFrameTest.java:59)
+	at junit.extensions.jfcunit.JFCTestCase$1.run(JFCTestCase.java:314)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+
+Testcase: testCancelEditUser took 0,253 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest.setUp(MainFrameTest.java:59)
+	at junit.extensions.jfcunit.JFCTestCase$1.run(JFCTestCase.java:314)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+
+Testcase: testAddUser took 0,214 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest.setUp(MainFrameTest.java:59)
+	at junit.extensions.jfcunit.JFCTestCase$1.run(JFCTestCase.java:314)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+
+Testcase: testBrowserControls took 0,23 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest.setUp(MainFrameTest.java:59)
+	at junit.extensions.jfcunit.JFCTestCase$1.run(JFCTestCase.java:314)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+
+Testcase: testDeleteUser took 0,203 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at kn.dmytro_grazhevskiy.usermanagement.gui.MainFrameTest.setUp(MainFrameTest.java:59)
+	at junit.extensions.jfcunit.JFCTestCase$1.run(JFCTestCase.java:314)
+	at junit.extensions.jfcunit.JFCTestCase$3.run(JFCTestCase.java:478)
+	at java.lang.Thread.run(Unknown Source)
+
