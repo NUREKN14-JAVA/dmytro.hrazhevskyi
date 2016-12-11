@@ -44,7 +44,7 @@
 	</target>
  
     <target name="war.exploded" depends="clean,compile">
-        <!-- скпировать все jsp -->
+        <!-- скопировать все jsp -->
         <copy todir="${war-jsp-dir}">
             <fileset dir="${main-webapp-dir}"/>
         </copy>   
