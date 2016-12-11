@@ -49,5 +49,16 @@ public class UserTableModel extends AbstractTableModel {
         }
         return null;
     }
+    public User getUserByRow(int selectedRow) {
+        return (User) users.get(selectedRow);
+        }
+    
+    public void addUsers(Collection users) {
+        this.users.addAll(users);
+        }
+    
+    public void clearUsers() {
+        users = new ArrayList();
+        }
 
 }
