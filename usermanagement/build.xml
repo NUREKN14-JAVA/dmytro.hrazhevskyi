@@ -8,13 +8,13 @@
     <property name="main-webapp-webinf-dir" value="${main-webapp-dir}/WEB-INF"/>
     <property name="main-resources-dir" value="${basedir}/src/main/resources"/>
     
-	<property name="build-dir" value="${basedir}/target"/>
+	<property name="build-dir" value="${basedir}/bin"/>
     <property name="classes-dir" value="${build-dir}/classes"/>   
     <property name="test-result-dir" value="${build-dir}/test-result"/>      
     <property name="lib-dir" value="${basedir}/lib"/>   
  
-    <property name="war-name" value="users"/>   
-    <property name="war-dir" value="${build-dir}/${war-name}"/>
+    <property name="war-name" value="WebContent"/>   
+    <property name="war-dir" value="${basedir}/${war-name}"/>
     <property name="war-jsp-dir" value="${war-dir}"/>
     <property name="war-webinf-dir" value="${war-dir}/WEB-INF"/>
     <property name="war-lib-dir" value="${war-webinf-dir}/lib"/>
@@ -44,7 +44,7 @@
 	</target>
  
     <target name="war.exploded" depends="clean,compile">
-        <!-- скопировать все jsp -->
+        <!-- скпировать все jsp -->
         <copy todir="${war-jsp-dir}">
             <fileset dir="${main-webapp-dir}"/>
         </copy>   
@@ -106,7 +106,7 @@
                 <fileset dir="${test-java-dir}">
                     <include name="**/*Test.java"/>
                     <exclude name="**/acceptance/*Test.java"/>   
-                </fileset>             
+                </fileset>            
             </batchtest>
 		</junit>		
 	</target>	

@@ -37,18 +37,48 @@ public class BrowseServlet extends HttpServlet {
      * @param req
      * @param resp
      */
-    private void details(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // TODO Auto-generated method stub
+	private void details(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String idStr = req.getParameter("id");
+        if (idStr == null || idStr.trim().length() == 0) {
+            req.setAttribute("error","You must select a user");
+            req.getRequestDispatcher("/browse.jsp").forward(req,  resp);
+            return;
+        }
+        try {
+            User user = DaoFactory.getInstance().getUserDao().find(new Long(idStr));
+            req.getSession().setAttribute("user", user);
+        } catch (Exception e) {
+            req.setAttribute("error","ERROR:" + e.toString());
+            req.getRequestDispatcher("/browse.jsp").forward(req, resp);
+            return;
+        }
+        req.getRequestDispatcher("/details").forward(req, resp);
         
     }
 
-    /**
-     * @param req
-     * @param resp
-     */
+	/**
+	 * Deletes user from database and dipatches the browse page
+	 * @param req - request with the user id
+	 * @param resp
+	 * @throws ServletException
+	 * @throws IOException
+	 */
     private void delete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // TODO Auto-generated method stub
-        
+        String idStr = req.getParameter("id");
+        if (idStr == null || idStr.trim().length() == 0) {
+            req.setAttribute("error","You must select a user");
+            req.getRequestDispatcher("/browse.jsp").forward(req,  resp);
+            return;
+        }
+        try {
+            User user = DaoFactory.getInstance().getUserDao().find(new Long(idStr));
+            DaoFactory.getInstance().getUserDao().delete(user);
+            req.getSession().setAttribute("result", "ok");
+        }
+        catch (Exception e) {
+            req.setAttribute("error","ERROR:" + e.toString());            
+        }
+        browse(req,resp);
     }
 
     /**
